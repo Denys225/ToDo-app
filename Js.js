@@ -1,14 +1,20 @@
 let input = document.getElementById('input');
 let ulContent = document.getElementById('ulContent');
 const modeBtn = document.getElementById('mode-btn');
+const addNewTask = document.getElementById('add-task-checkbox'); 
 
 modeBtn.addEventListener('click', function () {
     document.body.classList.toggle('light-mode');
 });
 
 
-input.addEventListener('keydown', function(e) {
-    if(e.key === 'Enter') {
+addNewTask.addEventListener('change', function(e) {
+    if(e = 'checked') {
+        if (input.value.trim() === '') {
+            alert('pls write something!');
+            return;
+        }
+
         let liContainer = document.createElement('li');
         liContainer.classList.add('li-container'); 
 
@@ -106,6 +112,7 @@ input.addEventListener('keydown', function(e) {
         ulContent.appendChild(liContainer)
         updateTaskCount();   
         input.value = '';
+        addNewTask.checked = false;
 
     }
 });
