@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>ToDoList</title>
+</head>
+<body>
+    <div class="wrapper">
+            <header class="header"></header>
+    <main class="main">
+        <div class="container">
+            <div class="content-top">
+                <div class="content-title">
+                    <h1>TODO</h1>
+                </div>
+                <div class="content-icone">
+                    <button id="mode-btn" class="mode-btn"></button>
+                </div>   
+            </div>
+            <div class="content">
+                <div class="content-input">
+                    <label class="input-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="input-text">
+                        <input type="text" id="input" placeholder="Currently typing">
+                    </div>
+                </div>
+                <div class="content-block">
+                    <ul id="ulContent" class="ulContent">
+                    </ul>
+                    <div class="content-footer">
+                        <div class="content-footer-content">
+                            <div class="content-footer-items">
+                                <span id="content-footer-items-num"></span>
+                                <span id="content-footer-items-text">Items left</span>
+                            </div>
+                            <div class="content-footer-todoNav">
+                                    <button id="all">All</button>
+                                    <button id="active">Active</button>
+                                    <button id="completed">completed</button>
+                            </div>
+                            <div class="content-footer-clear">
+                                <button id="clearСompletedBtn">Clear Сompleted</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-filter">
+                        <button id="all-mobile">All</button>
+                        <button id="active-mobile">Active</button>
+                        <button id="completed-mobile">Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    <script src="Js.js"></script>
+</body>
+</html>
